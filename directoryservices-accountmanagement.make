@@ -14,5 +14,5 @@ imagedir-targets: System.DirectoryServices.AccountManagement.dll
 clean-directoryservices-accountmanagement:
 	$(MAKE) -C $(SRCDIR)/directoryservices-accountmanagement clean
 	rm -f $(SRCDIR)/directoryservices-accountmanagement/.built
-.PHNOY: clean-directoryservices-accountmanagement
+.PHONY: clean-directoryservices-accountmanagement
 clean: clean-directoryservices-accountmanagement

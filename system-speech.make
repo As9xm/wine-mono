@@ -14,5 +14,5 @@ imagedir-targets: System.Speech.dll
 clean-system-speech:
 	$(MAKE) -C $(SRCDIR)/System.Speech/src clean
 	rm -f $(SRCDIR)/System.Speech/src/.built
-.PHNOY: clean-system-speech
+.PHONY: clean-system-speech
 clean: clean-system-speech
