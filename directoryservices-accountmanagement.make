@@ -1,6 +1,6 @@
 DIRECTORYSERVICES_ACCOUNTMANAGEMENT_SRCS=$(shell $(SRCDIR)/tools/git-updated-files $(SRCDIR)/mono/external/corefx/src/System.DirectoryServices.AccountManagement)
 
-$(SRCDIR)/directoryservices-accountmanagement/.built: $(BUILDDIR)/mono-unix/.installed $(WINFORMS_DATAVISUALIZATION_SRCS) directoryservices-accountmanagement/Makefile $(BUILDDIR)/resx2srid.exe
+$(SRCDIR)/directoryservices-accountmanagement/.built: $(BUILDDIR)/mono-unix/.installed $(DIRECTORYSERVICES_ACCOUNTMANAGEMENT_SRCS) $(SRCDIR)/directoryservices-accountmanagement/Makefile $(BUILDDIR)/resx2srid.exe
 	+$(MONO_ENV) $(MAKE) -C $(@D) MONO_PREFIX=$(BUILDDIR_ABS)/mono-unix-install RESX2SRID=$(BUILDDIR_ABS)/resx2srid.exe WINE_MONO_SRCDIR=$(SRCDIR_ABS)
 	touch $@
 
